@@ -55,11 +55,6 @@ func main() {
 	if err = json.Unmarshal(data, &mapVar); err != nil {
 		// failed to parse json to map, don't continue
 		log.Fatal(err)
-	} else {
-		// successfully parsed the data? let's print to see
-		for k, v := range mapVar {
-			fmt.Printf("%v: %v\n", k, v)
-		}
 	}
 
 	http.HandleFunc("/", redirectHandler)
