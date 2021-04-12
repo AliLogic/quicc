@@ -7,12 +7,24 @@
 	<title>Quicc - Link Shortener</title>
 </head>
 <body>
+	<h1>Quicc - a Go based URL Shortener</h1>
+
 	<div>
+		<h2>Create your own Quicc-link!</h2>
 		<form method="POST" action="/add/">
 			<label>Key</label>
 			<input name="key" type="text" value="google" />
 			<label>Link</label>
 			<input name="link" type="text" value="https://google.com" />
+			<input type="submit" value="Submit" />
+		</form>
+	</div>
+
+	<div>
+		<h2>Delete a Quicc-link?</h2>
+		<form method="POST" action="/delete/">
+			<label>Key</label>
+			<input name="key" type="text" />
 			<input type="submit" value="Submit" />
 		</form>
 	</div>
